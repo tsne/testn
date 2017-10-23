@@ -1,0 +1,40 @@
+{
+  "name": "testsome",
+  "version": "0.0.1",
+  "description": "A minimal test runner.",
+  "main": "dist/lib.cjs.js",
+  "module": "dist/lib.es.js",
+  "jsnext:main": "dist/lib.es.js",
+  "bin": {
+    "testsome": "dist/testsome.js"
+  },
+  "types": "dist/types/lib.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "test",
+    "testing",
+    "testsome"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist/*",
+    "build:lib": "rollup -c rollup.lib.js",
+    "build:cli": "rollup -c rollup.cli.js",
+    "build": "npm run build:lib && npm run build:cli",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "tsne",
+  "license": "MIT",
+  "homepage": "https://github.com/tsne/testsome",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsne/testsome.git"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.46",
+    "rollup": "^0.50.0",
+    "rollup-plugin-tsc": "^1.1.5"
+  }
+}
