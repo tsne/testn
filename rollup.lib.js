@@ -6,10 +6,9 @@ import pkg from "./package.json";
 export default {
 	input: "src/lib.ts",
 	output: [
-		{file: pkg["module"], format: "es"},
-		{file: pkg["main"], format: "cjs"},
+		{file: pkg["module"], format: "es", sourcemap: true},
+		{file: pkg["main"], format: "cjs", sourcemap: true},
 	],
-	sourcemap: true,
 	plugins: [
 		require("rollup-plugin-tsc")({
 			compilerOptions: {
