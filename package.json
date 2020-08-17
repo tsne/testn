@@ -1,6 +1,6 @@
 {
   "name": "testsome",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A minimal test runner.",
   "main": "dist/lib.cjs.js",
   "module": "dist/lib.es.js",
